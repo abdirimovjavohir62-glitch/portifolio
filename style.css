@@ -1,0 +1,143 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    background: #0c0c0c;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0; width: 100%;
+    padding: 20px 50px;
+    display: flex; justify-content: space-between;
+    backdrop-filter: blur(12px);
+    background: rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+nav a {
+    color: #ccc;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: .3s;
+}
+nav a:hover { color: #ff7b00; }
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at top, #1a1a1a, #000);
+}
+
+/* PROFILE IMAGE */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ff7b00;
+    box-shadow: 0 0 25px rgba(255, 120, 0, .5);
+    animation: fade 1.3s ease;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: scale(.5); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+/* SOCIAL ICONS */
+.socials {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.socials i { font-size: 32px; transition: .3s; }
+
+.ig:hover { color: #ff006e; text-shadow: 0 0 20px #ff006e; }
+.tg:hover { color: #00b3ff; text-shadow: 0 0 20px #00b3ff; }
+.gh:hover { color: #999;     text-shadow: 0 0 20px #fff; }
+
+/* TEXT ANIMATIONS */
+.hero-title {
+    margin-top: 20px;
+    font-size: 45px;
+}
+.accent { color: #ff7b00; }
+
+.typing {
+    font-size: 22px;
+    height: 30px;
+    margin-top: 10px;
+    color: #aaa;
+}
+
+/* BUTTON */
+.btn {
+    background: #ff7b00;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    color: black;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 18px;
+    transition: .3s;
+}
+.btn:hover {
+    transform: scale(1.06);
+    background: #ff5500;
+}
+
+/* SECTIONS */
+section { padding: 100px 50px; text-align: center; }
+
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(40px); transition: 1s; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* PROJECT CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    padding: 25px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    transition: .4s;
+}
+.card:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 25px rgba(255, 120, 0, .4);
+}
+
+/* CONTACT */
+form {
+    width: 340px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+input, textarea {
+    background: #222;
+    border: none;
+    color: white;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+textarea { height: 120px; }
